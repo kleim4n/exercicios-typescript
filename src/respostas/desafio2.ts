@@ -4,28 +4,38 @@ enum Trabalho {
     Padeiro
 }
 
+enum IdentificacaoGenero {
+    Feminino,
+    Masculino,
+    Outros
+}
+
 type Humano = {
     nome: string,
     idade: number,
-    profissao: Trabalho
+    profissao: Trabalho,
+    sexo?: IdentificacaoGenero
 }
 
 let pessoa1: Humano = {
     nome: 'maria',
     idade: 29,
-    profissao: Trabalho.Atriz
+    profissao: Trabalho.Atriz,
+    sexo: IdentificacaoGenero.Feminino
 };
 
 let pessoa2: Humano = {
     nome: 'roberto',
     idade: 19,
-    profissao: Trabalho.Padeiro
+    profissao: Trabalho.Padeiro,
+    sexo: IdentificacaoGenero.Masculino
 };
 
 let pessoa3: Humano = {
-    nome: 'laura',
+    nome: 'ariel',
     idade: 32,
-    profissao: Trabalho.Atriz
+    profissao: Trabalho.Atriz,
+    sexo: IdentificacaoGenero.Outros
 };
 
 let pessoa4: Humano = {
